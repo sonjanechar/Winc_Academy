@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <title> Things I Like </title>
+      
+    </head>
+    <body>
+        <h1>Things I like</h1>
+    
+        <ol> 
+            <li> cats </li>
+            <li> food </li>
+            <li> sunshine </li>
+            <li> coffee </li>
+        </ol>
+        <hr> </hr>
+    <a href="about.html"> <h2>About me </h2></a>
+     <a href="https://www.google.com/" target="_blank"> Just Google it </a>   
+    </body>
+</html>
