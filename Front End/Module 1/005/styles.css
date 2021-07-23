@@ -1,0 +1,240 @@
+body { 
+    background-color:white;
+}
+* {
+    margin: 0;
+    }
+
+.clr {
+    clear:both;
+}
+    
+header {
+    background-color: white;
+    height:80px;
+
+}
+footer{
+        width: 100%;
+        background-color: #AA5718;
+        color: white;
+        text-align: center;
+        height:75px;
+        padding: 20px 0 0 0;
+      
+}
+footer p{
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 8px;
+    display: inline;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Page logo*/
+.logo {
+    text-align: right;
+    padding: 25px;
+}
+
+/* menu items*/
+.nav {
+   float:left;
+   list-style:none;
+   padding:10px;
+    
+}
+    
+.nav li {
+    display:inline;
+}
+
+.nav a {
+    display:inline-block;
+    padding:15px;
+    color: #4F5A28;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    
+}
+a:hover {
+    color:#AA5718;
+}
+
+/*content*/
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.button {
+    background-color:#AA5718;
+    color:#D18F48;
+    padding: 10px 15px;
+    border: none;
+}
+
+.button:hover {
+    background-color:#E4E9BC;
+
+}
+.box1 { 
+    background-color:#FEF9D8;
+    height: 600px;
+    margin: 0 auto;
+    width: 960px;
+    display: inline-block;
+}
+
+
+.box1 h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    font-style: bold;
+    padding: 0 0 40px 0;
+    color: #AA5718;
+    
+    
+}
+
+#main-image {
+    float:left;
+    width: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 150px 10px 20px 100px;
+    
+}
+
+#side-text {
+    float:right;
+    width: 50%;
+    padding: 100px 150px 20px 50px;
+    box-sizing: border-box;
+}
+
+#side-text p{
+    font-size: 16px;
+    color: #D18F48;
+    width:300px;
+    
+    
+}
+
+#side-text h4{
+    padding: 40px 0;
+    font-family: 'Roboto', sans-serif;
+    color: #4F5A28;
+    font-size: 12px;   
+}
+
+#side-text h4:hover {
+    color:#AA5718;
+}
+
+.box2 { 
+    background-color:#E4E9BC;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color:#fff;
+    padding: 40px 40px 60px 40px;
+    height: 300px;
+}
+
+.box2 h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 34px;
+    color:#4F5A28;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.block {
+    float:left;
+    width:33.3%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.block h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: bold;
+    padding: 15px 0;
+    color:#D18F48;
+}
+
+.block p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #4F5A28;
+    max-height: 100px;
+}
+
+.box3 { 
+    background-color:#E4E9BC;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color:#fff;
+    padding: 20px;
+    margin: 10px 0 0 0;
+    height: 250px;
+    text-align: center;
+}
+
+.box3 h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 34px;
+    color:#4F5A28;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.box4 {
+
+   padding:40px;
+    height: 650px;
+    text-align: center;
+
+}
+.blockphoto {
+    float: left;
+    max-width: 50%;
+    
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contactform {
+    padding: 100px;
+
+}
+
+.contactform .form-group {
+    padding-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color:#AA5718;
+    font-style:italic
+}
+
+.contactform label {
+    display:block;
+    padding-bottom:10px;
+    
+}
+
+.contactform input[type="text"], .contactform textarea {
+    padding:15px;
+    width: 60%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border: 1px solid #AA5718;
+}
+
+
