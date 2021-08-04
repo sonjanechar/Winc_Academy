@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<head>
+    <title> Home </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/Skinify_logo_dark.png">
+        </a>
+        <nav>
+
+            <li> <a href="index.html"> home </a> </li>
+            <li> <a href="shop.html"> shop </a> </li>
+            <li> <a href="about.html"> about </a> </li>
+            <li> <a href="contact.html"> contact </a> </li>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <h2 class="orange">Contact us</h2>
+
+        <form class="contactform" method="POST" data-netlify="true">
+            <div class="form-group">
+                <label> Name </label>
+                <input type="text" name="name">
+
+                <label> Email </label>
+                <input type="text" name="email">
+
+                <label> Tel </label>
+                <input type="text" name="telnr">
+
+                <label> Age </label>
+                <input type="text" name="age">
+
+                <p>
+                    <label for="birthday">Birthday</label>
+                    <input type="date" id="birthday" name="birthday">
+                </p>
+
+                <label> Gender </label>
+                <br>
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">male</label><br>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">female</label><br>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">other</label><br>
+
+                <label> Favorite cuisine </label>
+                <br>
+                <input type="checkbox" id="cuisine1" name="cuisine1" value="French">
+                <label for="cuisine1">French</label><br>
+                <input type="checkbox" id="cuisine2" name="cuisine2" value="Italian">
+                <label for="cuisine2">Italian</label><br>
+                <input type="checkbox" id="cuisine3" name="cuisine3" value="Spanish">
+                <label for="cuisine3">Spanish</label><br>
+                <input type="checkbox" id="cuisine4" name="cuisine4" value="Arab">
+                <label for="cuisine4">Arab</label><br>
+
+                <label for="favcolor">Select your favorite color</label> <br>
+                <input type="color" id="favcolor1" name="favcolor" value="#F89F65">
+
+                <p>
+                    <label> Bio </label>
+                    <textarea name="message"> </textarea>
+                </p>
+                <label for="myfile">Upload your latest recipe</label><br>
+                <input type="file" id="myfile" name="myfile"> <br>
+
+                <label for="homepage">Add your website</label> <br>
+                <input type="url" id="homepage" name="homepage"> <br>
+
+                <br>
+                <input class="button-light" type="reset">
+                <input class="button-light" type="submit" value="Send" name="send">
+
+            </div>
+        </form>
+
+
+    </main>
+
+    <footer>
+        <ul class="footer-links">
+            <li> <a href="index.html">Terms & Conditions</a> </li>
+            <li> <a href="shop.html">Privacy Policy</a> </li>
+            <li> <a href="about.html">Shipping</a> </li>
+        </ul>
+
+        <ul class="footer-links">
+            <li> <a href="index.html">Instagram</a> </li>
+            <li> <a href="shop.html">About</a> </li>
+            <li> <a href="about.html">Contact</a> </li>
+        </ul>
+
+        <img src="img/Skinify_logo_icon_light.png">
+
+    </footer>
+</body>
+
+</html>
