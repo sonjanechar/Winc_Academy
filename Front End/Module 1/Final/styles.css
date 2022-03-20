@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template: 80px repeat(5, 1fr) / repeat(4, 1fr);
+    grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "s1 s1 s1 s1"
+    "s2 s2 s2 s2"
+    "s3 s3 s3 s3"
+    "footer footer footer footer";
+}
+
+/* H's & BUTTONS */ 
+h1 {
+    font-size: 2em;
+    color: #ff6600;
+    text-align: left;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #ff6600;
+    text-align: center;
+    margin: 25px;
+}
+
+h3 {
+    font-size: 1em;
+    color: #ff6600;
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    border-radius: none;
+    color: #ffffff;
+    background-color: #ff6600;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 85%;
+    cursor:pointer;
+    transition: transform 0.3s;
+}
+
+.button-2 {
+    display: inline-block;
+    border: none;
+    border-radius: none;
+    color: #ffffff;
+    background-color: #ffddd7;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 85%;
+    cursor:pointer;
+    transition: transform 0.3s;
+}
+  
+.button:hover, .button-2:hover {
+    transform:scale(1.1);
+}
+
+/* header */ 
+header {
+    grid-area: header;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 40px 0 20px;
+}
+  
+nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+  
+nav a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #252417;
+    font-size: 0.8em;
+    text-align: right;
+}
+  
+nav a:hover{
+    color:#ff6600;
+}
+
+header figure {
+    width: 45px;
+}
+
+/* main */
+main {
+    grid-area: main;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content:center;
+    align-items:flex-end;
+}
+
+main figure {
+    background-image: url("img/Kracht_decaf_S.png");
+    height: 500px;
+    background-position: bottom; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    width:100%;
+}
+
+.home-hero {
+    margin: 50px;
+    padding: 25px;
+}
+
+.home-hero p {
+    color: #252417;
+    font-size: 0.7em;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin: 25px 0;
+    min-width: 320px;
+}
+
+/* article */ 
+.section1 {
+    grid-area: s1;
+    margin: 50px 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap:80px;
+}
+
+.article-text {
+    max-width: 400px;
+}
+
+.article-text p {
+    text-align: center;
+    color: #252417;
+    font-size: 0.7em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.article-coffees {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 80px;
+}
+
+.article-coffees img {
+    transition: transform 0.6s;
+    width: 80px;
+}
+
+.article-coffees img:hover {
+    transform: rotate(90deg)
+}
+
+.article-coffees ul h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* section */ 
+.section2 {
+    grid-area: s2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.section2 figure {
+    background-image: url("img/Kracht_LungoIntenso_S.png");
+    min-height: 500px;
+    background-position: bottom; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    width:100%;
+}
+
+.about-home {
+    background-color: #252417;
+    padding: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.about-home h1 {
+    color:#ffddd7;
+    margin: 20px;
+}
+
+.about-home p, .button-2{
+    color:#ffffff;
+    margin: 20px;
+    max-width: 500px;  
+}
+
+/* products home */ 
+.section3 {
+    grid-area: s3;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items:center;
+    gap:40px;
+    margin: 50px 50px;
+}
+
+.products-text {
+    max-width: 615px;
+}
+
+.products-steps {
+    background-color: #ffddd7;
+    min-width: 275px;
+}
+
+.products-steps h3{
+    text-align: left;
+    margin: 50px;
+    color: #ff6600;
+    font-size: 0.9em;
+}
+
+/* productpage  */
+.productbase img {
+    width: 100%;
+}
+
+.productbase {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.productgroup {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.intro-product {
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.product-text h1 {
+    padding: 10px 0;
+}
+
+.product-text {
+    text-align: left;
+    color: #252417;
+    font-size: 0.7em;
+    font-family: 'Open Sans', sans-serif;
+    margin: 50px;
+    min-height: 220px;
+}
+
+/* about */ 
+.about {
+    margin: 50px;
+    max-width: 550px;
+}
+
+.about p{
+    text-align: left;
+    color: #252417;
+    font-size: 0.7em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+/* contactform */
+.contactform {
+    grid-area: main;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
+    min-width: 300px;
+    margin: 50px;
+}
+
+.contactform .form-group{
+    border: none;
+    color:#ff6600;
+    font-size: 0.7em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+ }
+ 
+.contactform input[type="text"], .contactform textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ff6600;
+ }
+
+/* footer */ 
+footer {
+    grid-area: footer;
+    background-color: #ff6600;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items:center;
+    padding: 25px;
+    gap: 20px;
+}
+
+#footer-items, a{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    font-size: 0.8em;
+    font-weight: 800;
+    text-decoration: none;
+    text-align: right;
+    color: #ffffff;
+}
+
+footer img {
+    width: 100px;
+}
+
+/* howitworkspage */ 
+.howitworks {
+    grid-area: main;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-content:space-around;
+    align-items:flex-start;
+    margin: 50px;
+    gap: 20px;
+}
+.section4 {
+    grid-area: s1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6600;
+ 
+}
+
+.section4 h3 {
+    color: #ffffff;
+}
+
+/* subscribe */ 
+.subscribe {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 25px;
+}
+
+.subscribe .form-group{
+    border: none;
+    color:#ffffff;
+    font-size: 0.7em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+ 
+.subscribe input[type="text"], .subscribe textarea {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ffffff;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 680px) and (max-width: 768px) {
+ 
+    .product-text {
+        column-count: 2;
+        column-gap: 20px;
+    }
+
+    .product-text h1 {
+        column-span: all;
+    }
+
+    .about-home {
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+    
+@media only screen and (min-width: 768px) {
+
+    main, .section1, .section2, .section3{
+        flex-flow: row nowrap;
+    }
+
+    .about-home {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .howitworks {
+        max-width: 350px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .product-text {
+        column-count: 2;
+        column-gap: 40px;
+    }
+
+    .product-text h1 {
+        column-span: all;
+    }
+
+    .about-home {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 3.5em;
+        color: #ff6600;
+        text-align: left;  
+    }
+}
