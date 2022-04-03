@@ -1,0 +1,12 @@
+@keyframes slide-out {
+    from { transform: translateX(0)}
+    to {transform: translateX(180)}
+    
+  }
+
+@keyframes slide-in {
+    from { transform: translateX(180)}
+    to {transform: translateX(0)}
+    
+  }
+  

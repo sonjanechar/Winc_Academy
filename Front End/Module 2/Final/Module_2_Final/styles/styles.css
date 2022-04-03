@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@-webkit-keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(180);
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(180);
+  }
+}
+@-webkit-keyframes slide-in {
+  from {
+    transform: translateX(180);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(180);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c3cfe2;
+  font-family: lato, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Part 1 - Testimonial */
+.testimonial {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 620px;
+}
+.testimonial img {
+  border-radius: 50%;
+  border: 6px solid white;
+  position: relative;
+  z-index: 1;
+  top: 62%;
+}
+.testimonial .testimonial-top {
+  background-color: white;
+  width: 380px;
+  position: relative;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  border-radius: 20px 20px 0 0;
+  padding: 37px;
+  font-size: 1.18em;
+  line-height: 175%;
+  color: #525252;
+}
+.testimonial .testimonial-bottom {
+  background-color: #686de0;
+  width: 380px;
+  position: relative;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  height: 200px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 42px;
+}
+.testimonial .testimonial-bottom h1 {
+  font-size: 1em;
+  color: white;
+  letter-spacing: 0.1em;
+}
+.testimonial .testimonial-bottom h2 {
+  font-size: 0.9em;
+  color: #c3cfe2;
+}
+
+/* Part 2 - Portfolio Grid */
+main {
+  margin: 40px;
+}
+main .portfolio-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+  gap: 25px;
+}
+main .portfolio-grid .photo {
+  width: 100%;
+  position: relative;
+  border-radius: 5%;
+  background-color: #262f3d;
+  overflow: hidden;
+}
+main .portfolio-grid .photo .avatar {
+  width: 100%;
+  display: block;
+  height: auto;
+  opacity: 1;
+  transition: 0.2s ease;
+  transform: scale(1);
+  overflow: hidden;
+}
+main .portfolio-grid .photo .overlay {
+  opacity: 0;
+  border-radius: 5%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+main .portfolio-grid .photo .overlay button {
+  top: 50%;
+  left: 50%;
+  width: 90px;
+  padding: 4px;
+  transform: translate(-50%);
+  position: absolute;
+  font-family: lato, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+main .portfolio-grid .photo:hover .avatar {
+  opacity: 0;
+  transform: scale(1.1);
+}
+main .portfolio-grid .photo:hover .overlay {
+  opacity: 1;
+}
+
+/* Part 3 - Social Media Buttons */
+aside {
+  margin: 100px 0;
+}
+aside .socials {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+aside .socials a {
+  font-family: lato, sans-serif;
+  font-size: 0.75em;
+  color: white;
+}
+aside .socials .social-media {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 35px;
+  -webkit-animation: slide-out 0.5s ease-in forwards;
+          animation: slide-out 0.5s ease-in forwards;
+}
+aside .socials .social-media.blog {
+  background-color: #e17b77;
+  width: 180px;
+  height: 35px;
+  transform: translateX(140px);
+}
+aside .socials .social-media.linkedin {
+  background-color: #007bb6;
+  width: 180px;
+  height: 35px;
+  transform: translateX(140px);
+}
+aside .socials .social-media.twitter {
+  background-color: #00aced;
+  width: 180px;
+  height: 35px;
+  transform: translateX(140px);
+}
+aside .socials .social-media.facebook {
+  background-color: #3b5998;
+  width: 180px;
+  height: 35px;
+  transform: translateX(140px);
+}
+aside .socials .social-media.github {
+  background-color: #333;
+  width: 180px;
+  height: 35px;
+  transform: translateX(140px);
+}
+aside .socials .fa-laptop-code {
+  transform: translate(55%);
+}
+aside .socials .fa-twitter {
+  transform: translate(80%);
+}
+aside .socials .fa-linkedin-in {
+  transform: translate(100%);
+}
+aside .socials .fa-facebook-f {
+  transform: translate(160%);
+}
+aside .socials .fa-github {
+  transform: translate(85%);
+}
+aside .socials .fa-laptop-code::before {
+  content: "\f5fc";
+  color: white;
+}
+aside .socials .fa-twitter::before {
+  content: "\f099";
+  color: white;
+}
+aside .socials .fa-linkedin-in::before {
+  content: "\f0e1";
+  color: white;
+}
+aside .socials .fa-facebook-f::before {
+  content: "\f39e";
+  color: white;
+}
+aside .socials .fa-github::before {
+  content: "\f09b";
+  color: white;
+}
+aside .socials .social-media:hover {
+  -webkit-animation: slide-in 0.5s alternate ease-in forwards;
+          animation: slide-in 0.5s alternate ease-in forwards;
+}
+
+/* Media Queries width < 400px */
+@media only screen and (min-width: 400px) {
+  aside {
+    min-width: 400px;
+    overflow: hidden;
+  }
+}/*# sourceMappingURL=styles.css.map */

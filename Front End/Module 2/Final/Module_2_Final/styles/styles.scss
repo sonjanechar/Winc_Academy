@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import"./variables";
+@import"./mixins";
+@import"./keyframes";
+
+/* Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bgcolor;
+  font-family: lato, sans-serif;
+  overflow-x: hidden;
+
+}
+/* Part 1 - Testimonial */
+.testimonial {
+  @include flex;
+  height: 620px;
+ 
+
+      img {
+      @include avatar;
+        }
+        
+      .testimonial-top {
+        background-color: $txtbg;
+        @include testimonial-design;
+        height: 400px;
+        border-radius: 20px 20px 0 0;
+        @include p;
+      }
+
+      .testimonial-bottom {
+        background-color: $footerbg;
+        @include testimonial-design;
+        height:200px;
+        border-radius: 0 0 20px 20px;
+        @include flex;
+        gap:10px;
+        padding-top: 42px;
+        
+          h1 {
+            font-size:1em;
+            color: $txtbg;
+            letter-spacing: 0.1em;
+          }
+
+          h2 {
+            font-size: 0.9em;
+            color: $bgcolor;
+          }
+        
+      }
+
+}
+/* Part 2 - Portfolio Grid */
+main {
+  margin: 40px;
+      .portfolio-grid {
+       @include grid;
+
+          .photo {
+            width: 100%;
+            position: relative;
+            border-radius: $border;
+            background-color: $photobg;
+            overflow: hidden;
+          
+                    .avatar {
+                      width: 100%;
+                      display: block;
+                      height: auto;
+                      opacity: 1;
+                      transition: $tr2s;
+                      transform: scale(1);
+                      overflow: hidden;
+                    }
+                    .overlay {
+                      @include overlay;
+                    }
+                    .overlay button {
+                    @include overlaybutton;
+                    }
+          }
+
+      .photo:hover .avatar {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+      .photo:hover .overlay {
+        opacity: 1;
+      }
+      }   
+}
+
+/* Part 3 - Social Media Buttons */
+
+aside {
+  margin: 100px 0;
+
+      .socials {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+
+                a {
+                  font-family: lato, sans-serif;
+                  font-size: 0.75em;
+                  color: $txtbg;
+                }
+
+                .social-media {
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items:center;
+                  gap: 35px;
+                  animation: slide-out .5s ease-in forwards;
+                }
+
+                        .social-media.blog {
+                          background-color: #e17b77;
+                          @include slider;
+                        }
+
+                        .social-media.linkedin {
+                          background-color: #007bb6;
+                          @include slider;
+                        }
+
+                        .social-media.twitter {
+                          background-color: #00aced;
+                          @include slider;
+                        }
+
+                        .social-media.facebook {
+                          background-color: #3b5998;
+                          @include slider;
+                        }
+
+                        .social-media.github {
+                          background-color: #333;
+                          @include slider;
+                        }
+
+                          .fa-laptop-code {
+                            transform: translate(55%);
+                          }
+                          .fa-twitter {
+                            transform: translate(80%);
+                          }
+                          .fa-linkedin-in {
+                            transform: translate(100%);
+                          }
+                          .fa-facebook-f {
+                            transform: translate(160%);
+                          }
+                          .fa-github {
+                            transform: translate(85%);
+                          }
+
+                          .fa-laptop-code::before {
+                            content: "\f5fc";
+                            color: $txtbg;
+                          }
+                          .fa-twitter::before {
+                            content: "\f099";
+                            color: $txtbg;
+                          }
+                          .fa-linkedin-in::before {
+                            content: "\f0e1";
+                            color: $txtbg;
+                          }
+                          .fa-facebook-f::before {
+                            content:"\f39e";
+                            color: $txtbg;
+                          }
+                          .fa-github::before {
+                            content: "\f09b";
+                            color: $txtbg;
+                          }
+
+                   .social-media:hover {
+                     animation: slide-in .5s alternate ease-in forwards;   
+                    }
+
+      }
+
+}
+
+/* Media Queries width < 400px */
+@media only screen and (min-width: 400px) {
+  aside {
+    min-width: 400px;
+    overflow: hidden;
+  }
+}

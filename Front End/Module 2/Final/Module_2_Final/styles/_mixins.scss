@@ -1,0 +1,65 @@
+
+@mixin flex {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: center;
+    gap: 25px;
+
+}
+
+@mixin testimonial-design {
+    width: 380px;
+    position: relative;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+}
+
+@mixin avatar {
+    border-radius: 50%;
+    border: 6px solid white;
+    position: relative;
+    z-index: 1;
+    top: 62%;
+}
+
+@mixin p {
+        padding: 37px;
+        font-size: 1.18em;
+        line-height: 175%;
+        color: $txtcolor;
+}
+
+
+@mixin overlay {
+    opacity: 0;
+    border-radius: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+@mixin overlaybutton {
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    padding: 4px;
+    transform: translate(-50%) ;
+    position: absolute;
+    font-family: lato, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@mixin slider {
+    width: 180px;
+    height: 35px;
+    transform: translateX(140px);
+}
